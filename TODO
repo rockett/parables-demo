@@ -1,0 +1,33 @@
+ViewExtras resource plugin
+    baseTitle
+    docType
+    titleSeparator
+    stylesheets
+    scripts
+    dojo
+    jquery
+
+Log resource plugin
+    filters
+    formatters
+    refactor getWriters
+
+Doctrine log writer
+    formatting support?
+
+Doctrine session save handler
+    compound PK support?
+
+---
+
+Review docblocks throughout My library
+
+Determine additional components for My lib
+
+Test acl model methods
+
+Test My library
+
+Test controllers
+
+

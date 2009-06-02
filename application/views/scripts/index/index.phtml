@@ -1,0 +1,23 @@
+<h1>Worklog 0.1</h1>
+
+<?php if (count($this->paginator)): ?>
+    <?php foreach ($this->paginator as $worklog): ?>
+        <h2><?php echo $this->escape($worklog->name); ?> created on <?php echo $this->escape($worklog->created_at); ?></h2>
+
+        <?php if ($worklog->Entries->count()):?>
+
+            <?php foreach ($worklog->Entries as $entry): ?>
+                <p>Opened @ <?php echo $this->escape($entry->opened); ?></p>
+
+                <p>Closed @ <?php echo $this->escape($entry->closed); ?></p>
+
+                <p>Notes @ <span style="font-size: 80%"><?php echo $this->escape($entry->notes); ?></span></p>
+
+            <?php endforeach; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+<div id="paginator">
+    <?php echo $this->paginator; ?>
+</div>

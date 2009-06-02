@@ -1,0 +1,53 @@
+---
+attributes:
+    export: all
+    validate: true
+
+Applog:
+    actAs: [Timestampable]
+    columns:
+        lvl:
+            type: string(255)
+            notnull: true
+        msg:
+            type: string
+            notnull: true
+
+Worklog:
+    actAs: [Timestampable]
+    columns:
+        name:
+            type: string(255)
+            notnull: true
+
+Entry:
+    columns:
+        opened:
+            type: timestamp
+            notnull: true
+        closed:
+            type: timestamp
+            notnull: true
+        notes:
+            type: clob
+        worklog_id:
+            type: integer
+            notnull: true
+    relations:
+        Worklog:
+            foreignAlias: Entries
+            onDelete: CASCADE
+            onUpdate: CASCADE
+
+Session:
+    columns:
+        id:
+            type: string(32)
+            fixed: true
+            primary: true
+        modified:
+            type: integer
+        lifetime:
+            type: integer
+        data:
+            type: string
