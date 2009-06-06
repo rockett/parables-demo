@@ -1,27 +1,8 @@
 <?php
-/**
- * Worklog Demo
- *
- * @category   Models
- * @package    Entry
- * @copyright  Copyright (c) 2009-2012 Forward Software Inc. (http://www.forward-compatible.com)
- * @version    $Id: Entry.php 6 2009-05-21 21:46:14Z mlurz $
- */
-
-/**
- * @see BaseEntry
- */
-// require_once './generated/BaseEntry.php';
-
-/**
- * @category   Models
- * @package    Entry
- * @copyright  Copyright (c) 2009-2012 Forward Software Inc. (http://www.forward-compatible.com)
- */
 class Entry extends BaseEntry implements Zend_Acl_Resource_Interface
 {
     /**
-     * Retrieve resource identifier for Zend_Acl
+     * Retrieve resource identifier
      *
      * @return string
      */

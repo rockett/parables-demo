@@ -1,3 +1,6 @@
+Doctrine session save handler
+    compound PK support?
+
 ViewExtras resource plugin
     baseTitle
     docType
@@ -11,12 +14,6 @@ Log resource plugin
     filters
     formatters
     refactor getWriters
-
-Doctrine log writer
-    formatting support?
-
-Doctrine session save handler
-    compound PK support?
 
 ---
 

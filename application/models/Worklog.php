@@ -1,27 +1,8 @@
 <?php
-/**
- * Worklog Demo
- *
- * @category   Models
- * @package    Worklog
- * @copyright  Copyright (c) 2009-2012 Forward Software Inc. (http://www.forward-compatible.com)
- * @version    $Id: Worklog.php 6 2009-05-21 21:46:14Z mlurz $
- */
-
-/**
- * @see BaseWorklog
- */
-// require_once './generated/BaseWorklog.php';
-
-/**
- * @category   Models
- * @package    Worklog
- * @copyright  Copyright (c) 2009-2012 Forward Software Inc. (http://www.forward-compatible.com)
- */
 class Worklog extends BaseWorklog implements Zend_Acl_Resource_Interface
 {
     /**
-     * Retrieve resource identifier for Forward_Acl
+     * Retrieve resource identifier
      *
      * @return string
      */

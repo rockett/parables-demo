@@ -4,13 +4,18 @@ attributes:
     validate: true
 
 Applog:
-    actAs: [Timestampable]
     columns:
-        lvl:
-            type: string(255)
-            notnull: true
-        msg:
+        message:
             type: string
+            notnull: true
+        priority:
+            type: int(1)
+            notnull: true
+        priority_name:
+            type: string(32)
+            notnull: true
+        timestamp:
+            type: timestamp
             notnull: true
 
 Worklog:
