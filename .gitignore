@@ -1,2 +1,2 @@
-data/
-tests/logs/
+tests/logs/report/*
+tests/logs/testdox.html
