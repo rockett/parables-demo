@@ -1,14 +1,16 @@
-1. Install the parables library
+1. Install Parables
 
     cd into a temp directory
 
     git clone git://github.com/mlurz71/parables.git 
 
-    cp -R /path/to/parables/My /path/to/parables-demo/library/
+    cp -R /path/to/parables/Parables /path/to/parables-demo/library/
 
-2. Generate models from Yaml, generate database and load fixtures.
+2. Generate models from YAML, generate database and load fixtures.
 
     cd /path/to/parables-demo/script/doctrine.sh build-all-reload
+
+    chmod 0777 /path/to/parables-demo/data/{environment}.db
 
 3. Setup a virtual host using /path/to/parables-demo/public as docroot and
 update your hosts file

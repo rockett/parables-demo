@@ -34,7 +34,7 @@ class IndexController extends Zend_Controller_Action
             ->from('Worklog w')
             ->leftJoin('w.Entries e');
 
-        $adapter = new My_Doctrine_Paginator_Adapter_Query($q);
+        $adapter = new Parables_Paginator_Adapter_Doctrine($q);
 
         $paginator = new Zend_Paginator($adapter);
         $paginator->setCurrentPageNumber($this->_getParam('page',1))
