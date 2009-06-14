@@ -1,2 +1,4 @@
+data/logs/*
+data/sessions/*
 tests/logs/report/*
 tests/logs/testdox.html
