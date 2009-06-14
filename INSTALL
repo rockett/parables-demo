@@ -1,19 +1,18 @@
-1. Install Parables
+------------------------------
+INSTALLATION INSTRUCTIONS
+------------------------------
+1. cp -R /path/to/parables.git/Parables /path/to/parables-demo/library/
 
-    cd into a temp directory
+2. Setup a virtual host using /path/to/parables-demo/public as docroot
 
-    git clone git://github.com/mlurz71/parables.git 
+3. Update /etc/hosts
 
-    cp -R /path/to/parables/Parables /path/to/parables-demo/library/
+------------------------------
+DATABASE REBUILD INSTRUCTIONS
+------------------------------
+1. cd /path/to/parables-demo/
 
-2. Generate models from YAML, generate database and load fixtures.
+2. ./scripts/doctrine.sh build-all-reload
 
-    cd /path/to/parables-demo/script/doctrine.sh build-all-reload
-
-    chmod 0777 /path/to/parables-demo/data/{environment}.db
-
-3. Setup a virtual host using /path/to/parables-demo/public as docroot and
-update your hosts file
-
-4. Browse the virtual host
+3. chmod 0777 /path/to/parables-demo/data/{environment}.db
 
