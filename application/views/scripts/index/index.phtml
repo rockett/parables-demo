@@ -1,8 +1,12 @@
 <?php $this->headTitle('Home Page'); ?>
 
-<h1>Parables Demo</h1>
+<h2>Worklogs</h2>
 
+<?php if (!empty($this->worklogs)): ?>
+<ul>
 <?php foreach ($this->worklogs as $worklog): ?>
-<h2><?php echo $this->escape($worklog['name']); ?></h2>
+    <li><?php echo $this->escape($worklog['name']); ?></li>
 <?php endforeach; ?>
+</ul>
+<?php endif; ?>
 

@@ -1,0 +1,16 @@
+<?php
+    $dijitId = 'main';
+
+    $dijitParams = array(
+        'region' => 'center',
+    );
+
+    $dijitAttribs = array();
+?>
+
+<?php $this->contentPane()->captureStart($dijitId, $dijitParams, $dijitAttribs) ?>
+
+<?php echo $this->layout()->content ?>
+
+<?php echo $this->contentPane()->captureEnd($dijitId) ?>
+

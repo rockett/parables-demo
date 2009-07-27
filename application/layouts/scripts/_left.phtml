@@ -1,0 +1,67 @@
+<?php
+    $dijitId = 'left';
+
+    $dijitParams = array(
+        'region' => 'left',
+    );
+
+    $dijitAttribs = array();
+?>
+
+<?php $this->contentPane()->captureStart($dijitId, $dijitParams, $dijitAttribs) ?>
+
+    <?php
+        $accordionContainerId = 'accordion';
+
+        $accordionContainerParams = array(
+        );
+
+        $accordionContainerAttribs = array();
+    ?>
+
+    <?php $this->accordionContainer()->captureStart($accordionContainerId,
+        $accordionContainerParams, $accordionContainerAttribs) ?>
+
+        <?php
+            $aboutPaneId = 'about-pane';
+
+            $aboutPaneParams = array(
+                'title' => 'About',
+            );
+
+            $aboutPaneAttribs = array();
+        ?>
+
+        <?php $this->accordionPane()->captureStart($aboutPaneId,
+            $aboutPaneParams, $aboutPaneAttribs) ?>
+
+            <p>This is a demo application for Parables, a library of Zend
+Framework components and featuring Doctrine integration points with the
+ZF.</p>
+
+        <?php echo $this->accordionPane()->captureEnd($aboutPaneId) ?>
+
+        <?php $recentChangesPaneId = 'recent-changes-pane';
+
+            $recentChangesPaneParams = array(
+                'title' => 'Recent Changes',
+            );
+
+            $recentChangesPaneAttribs = array(); ?>
+
+        <?php $this->accordionPane()->captureStart($recentChangesPaneId,
+            $recentChangesPaneParams, $recentChangesPaneAttribs) ?>
+
+            <p>Initial Dojo layout.</p>
+
+            <p>Major revision to Doctrine resource plugins to support
+attributes in Doctrine 1.2</p>
+
+            <p>Added a bunch of new resource plugins.</p>
+
+        <?php echo $this->accordionPane()->captureEnd($recentChangesPaneId) ?>
+
+    <?php echo $this->accordionContainer()->captureEnd($accordionContainerId) ?>
+
+<?php echo $this->contentPane()->captureEnd($dijitId) ?>
+
