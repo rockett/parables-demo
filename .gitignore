@@ -1,3 +1,4 @@
+data/pluginLoaderCache.php
 data/logs/*
 data/sessions/*
 tests/logs/report/*
