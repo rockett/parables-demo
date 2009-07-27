@@ -36,10 +36,10 @@ class Worklog extends BaseWorklog implements Zend_Acl_Resource_Interface
      */
     public function isOpen()
     {
-        $lastEntry = $this->Entries->getLast();
-
-        if ($lastEntry->isOpen()) {
-            return true;
+        if ($lastEntry = $this->Entries->getLast()) {
+            if ($lastEntry->isOpen()) {
+                return true;
+            }
         }
 
         return false;

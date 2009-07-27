@@ -12,8 +12,7 @@ class Entry extends BaseEntry implements Zend_Acl_Resource_Interface
     }
 
     /**
-     * Return calculated the difference in seconds between closed and opened 
-     * times
+     * Calculate the difference in seconds between closed and opened
      *
      * @return int
      */

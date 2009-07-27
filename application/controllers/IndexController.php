@@ -27,20 +27,6 @@ class IndexController extends Zend_Controller_Action
      */
     public function indexAction()
     {
-        Zend_Paginator::setDefaultScrollingStyle('Sliding');
-        Zend_View_Helper_PaginationControl::setDefaultViewPartial('/index/paginator.phtml');
-
-        $q = Doctrine_Query::create()
-            ->from('Worklog w')
-            ->leftJoin('w.Entries e');
-
-        $adapter = new Parables_Paginator_Adapter_Doctrine($q);
-
-        $paginator = new Zend_Paginator($adapter);
-        $paginator->setCurrentPageNumber($this->_getParam('page',1))
-            ->setItemCountPerPage(5)
-            ->setView($this->view);
-
-        $this->view->paginator = $paginator;
+        $this->view->worklogs = Doctrine::getTable('Worklog')->findAll()->toArray();
     }
 }

@@ -29,3 +29,4 @@ $application->bootstrap('doctrine');
 $doctrine = $application->getBootstrap()->getResource('doctrine');
 $cli = new Doctrine_Cli($doctrine['paths']);
 $cli->run($_SERVER['argv']);
+
