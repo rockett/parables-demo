@@ -11,14 +11,18 @@
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
  * @author     ##NAME## <##EMAIL##>
- * @version    SVN: $Id: Builder.php 5441 2009-01-30 22:58:43Z jwage $
+ * @version    SVN: $Id: Builder.php 5925 2009-06-22 21:27:17Z jwage $
  */
 abstract class BaseWorklog extends Doctrine_Record
 {
     public function setTableDefinition()
     {
         $this->setTableName('worklog');
-        $this->hasColumn('name', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
+        $this->hasColumn('name', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => '255',
+             ));
 
 
         $this->setAttribute(Doctrine::ATTR_EXPORT, Doctrine::EXPORT_ALL);
@@ -27,8 +31,10 @@ abstract class BaseWorklog extends Doctrine_Record
 
     public function setUp()
     {
-        $this->hasMany('Entry as Entries', array('local' => 'id',
-                                                 'foreign' => 'worklog_id'));
+        parent::setUp();
+    $this->hasMany('Entry as Entries', array(
+             'local' => 'id',
+             'foreign' => 'worklog_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

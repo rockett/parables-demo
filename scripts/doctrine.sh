@@ -25,8 +25,8 @@ $application = new Zend_Application(
     APPLICATION_ENV, 
     APPLICATION_PATH . '/configs/application.ini'
 );
-$application->bootstrap('doctrine');
-$doctrine = $application->getBootstrap()->getResource('doctrine');
-$cli = new Doctrine_Cli($doctrine['paths']);
+$application->bootstrap('doctrinepaths');
+$doctrinePaths = $application->getBootstrap()->getResource('doctrinepaths');
+$cli = new Doctrine_Cli($doctrinePaths);
 $cli->run($_SERVER['argv']);
 

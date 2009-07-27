@@ -13,21 +13,37 @@
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
  * @author     ##NAME## <##EMAIL##>
- * @version    SVN: $Id: Builder.php 5441 2009-01-30 22:58:43Z jwage $
+ * @version    SVN: $Id: Builder.php 5925 2009-06-22 21:27:17Z jwage $
  */
 abstract class BaseSession extends Doctrine_Record
 {
     public function setTableDefinition()
     {
         $this->setTableName('session');
-        $this->hasColumn('id', 'string', 32, array('type' => 'string', 'fixed' => 1, 'primary' => true, 'length' => '32'));
-        $this->hasColumn('modified', 'integer', null, array('type' => 'integer'));
-        $this->hasColumn('lifetime', 'integer', null, array('type' => 'integer'));
-        $this->hasColumn('data', 'string', null, array('type' => 'string'));
+        $this->hasColumn('id', 'string', 32, array(
+             'type' => 'string',
+             'fixed' => 1,
+             'primary' => true,
+             'length' => '32',
+             ));
+        $this->hasColumn('modified', 'integer', null, array(
+             'type' => 'integer',
+             ));
+        $this->hasColumn('lifetime', 'integer', null, array(
+             'type' => 'integer',
+             ));
+        $this->hasColumn('data', 'string', null, array(
+             'type' => 'string',
+             ));
 
 
         $this->setAttribute(Doctrine::ATTR_EXPORT, Doctrine::EXPORT_ALL);
         $this->setAttribute(Doctrine::ATTR_VALIDATE, true);
     }
 
+    public function setUp()
+    {
+        parent::setUp();
+    
+    }
 }
