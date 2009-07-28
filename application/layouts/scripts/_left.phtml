@@ -1,67 +1,43 @@
-<?php
-    $dijitId = 'left';
+<?php $dijitId = 'left';
 
-    $dijitParams = array(
-        'region' => 'left',
-    );
+    $dijitParams = array('region' => 'left');
 
-    $dijitAttribs = array();
-?>
+    $dijitAttribs = array(); ?>
 
-<?php $this->contentPane()->captureStart($dijitId, $dijitParams, $dijitAttribs) ?>
+<?php $this->contentPane()->captureStart($dijitId, $dijitParams,
+    $dijitAttribs) ?>
 
-    <?php
-        $accordionContainerId = 'accordion';
+    <?php $accordionContainerId = 'accordion';
 
-        $accordionContainerParams = array(
-        );
+        $accordionContainerParams = array();
 
-        $accordionContainerAttribs = array();
-    ?>
+        $accordionContainerAttribs = array(); ?>
 
     <?php $this->accordionContainer()->captureStart($accordionContainerId,
         $accordionContainerParams, $accordionContainerAttribs) ?>
 
-        <?php
-            $aboutPaneId = 'about-pane';
+        <?php $aboutId = 'about-pane';
 
-            $aboutPaneParams = array(
-                'title' => 'About',
-            );
+            $aboutParams = array( 'title' => 'About Parables',);
 
-            $aboutPaneAttribs = array();
-        ?>
+            $aboutAttribs = array(); ?>
 
-        <?php $this->accordionPane()->captureStart($aboutPaneId,
-            $aboutPaneParams, $aboutPaneAttribs) ?>
+        <?php $this->contentPane()->captureStart($aboutId, $aboutParams,
+            $aboutAttribs) ?>
 
-            <p>This is a demo application for Parables, a library of Zend
-Framework components and featuring Doctrine integration points with the
-ZF.</p>
+            <p><a href="http://www.github.com/mlurz71/parables"
+style="font-size:200%">Parables</a> is a collection of components for the <a
+href="http://framework.zend.com" style="font-size:150%">Zend Framework</a>.<p>
 
-        <?php echo $this->accordionPane()->captureEnd($aboutPaneId) ?>
+            <p>Many of these components provide integration points between the
+<a href="http://framework.zend.com" style="font-size:150%">Zend Framework</a>
+and <a href="http://doctrine-project.org" style="font-size:150%">Doctrine
+O/RM.</a></p>
 
-        <?php $recentChangesPaneId = 'recent-changes-pane';
+        <?php echo $this->contentPane()->captureEnd($aboutId) ?>
 
-            $recentChangesPaneParams = array(
-                'title' => 'Recent Changes',
-            );
-
-            $recentChangesPaneAttribs = array(); ?>
-
-        <?php $this->accordionPane()->captureStart($recentChangesPaneId,
-            $recentChangesPaneParams, $recentChangesPaneAttribs) ?>
-
-            <p>Initial Dojo layout.</p>
-
-            <p>Major revision to Doctrine resource plugins to support
-attributes in Doctrine 1.2</p>
-
-            <p>Added a bunch of new resource plugins.</p>
-
-        <?php echo $this->accordionPane()->captureEnd($recentChangesPaneId) ?>
-
-    <?php echo $this->accordionContainer()->captureEnd($accordionContainerId) ?>
+    <?php echo $this->accordionContainer()->captureEnd($accordionContainerId)
+?>
 
 <?php echo $this->contentPane()->captureEnd($dijitId) ?>
 

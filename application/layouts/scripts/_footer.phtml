@@ -1,16 +1,14 @@
-<?php
-    $dijitId = 'footer';
+<?php $dijitId = 'footer';
 
-    $dijitParams = array(
-        'region' => 'bottom',
-    );
+    $dijitParams = array( 'region' => 'bottom',);
 
-    $dijitAttribs = array();
-?>
+    $dijitAttribs = array(); ?>
 
-<?php $this->contentPane()->captureStart($dijitId, $dijitParams, $dijitAttribs) ?>
+<?php $this->contentPane()->captureStart($dijitId, $dijitParams,
+    $dijitAttribs) ?>
 
-<p>Copyright &copy; 2009-2012 Forward Software, Inc.</p>
+<p>Copyright &copy; 2009-2012 <a
+href="http://mattl.forward-comaptible.com">Forward Software, Inc.</a></p>
 
 <?php echo $this->contentPane()->captureEnd($dijitId) ?>
 

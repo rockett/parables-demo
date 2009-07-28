@@ -1,22 +1,17 @@
-<?php
-    $dijitId = 'layout';
+<?php $dijitId = 'layout';
 
-    $dijitParams = array(
-        'design' => 'headline',
-    );
+    $dijitParams = array( 'design' => 'headline',);
 
-    $dijitAttribs = array();
-?>
+    $dijitAttribs = array(); ?>
 
-<?php $this->borderContainer()->captureStart($dijitId, $dijitParams, $dijitAttribs) ?>
+<?php $this->borderContainer()->captureStart($dijitId, $dijitParams,
+    $dijitAttribs) ?>
 
 <?php echo $this->render('_header.phtml') ?>
 
 <?php echo $this->render('_left.phtml') ?>
 
 <?php echo $this->render('_main.phtml') ?>
-
-<?php echo $this->render('_right.phtml') ?>
 
 <?php echo $this->render('_footer.phtml') ?>
 

@@ -10,3 +10,7 @@ html, body, #layout, #header-toolbar, #footer-toolbar{
     width:300px;
 }
 
+#about-pane{
+    background-color:#ffc;
+}
+

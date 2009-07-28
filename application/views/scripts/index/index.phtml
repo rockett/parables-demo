@@ -1,12 +1,1 @@
-<?php $this->headTitle('Home Page'); ?>
-
-<h2>Worklogs</h2>
-
-<?php if (!empty($this->worklogs)): ?>
-<ul>
-<?php foreach ($this->worklogs as $worklog): ?>
-    <li><?php echo $this->escape($worklog['name']); ?></li>
-<?php endforeach; ?>
-</ul>
-<?php endif; ?>
 
