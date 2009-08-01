@@ -7,37 +7,5 @@
 <?php $this->contentPane()->captureStart($dijitId, $dijitParams,
     $dijitAttribs) ?>
 
-    <?php $accordionContainerId = 'accordion';
-
-        $accordionContainerParams = array();
-
-        $accordionContainerAttribs = array(); ?>
-
-    <?php $this->accordionContainer()->captureStart($accordionContainerId,
-        $accordionContainerParams, $accordionContainerAttribs) ?>
-
-        <?php $aboutId = 'about-pane';
-
-            $aboutParams = array( 'title' => 'About Parables',);
-
-            $aboutAttribs = array(); ?>
-
-        <?php $this->contentPane()->captureStart($aboutId, $aboutParams,
-            $aboutAttribs) ?>
-
-            <p><a href="http://www.github.com/mlurz71/parables"
-style="font-size:200%">Parables</a> is a collection of components for the <a
-href="http://framework.zend.com" style="font-size:150%">Zend Framework</a>.<p>
-
-            <p>Many of these components provide integration points between the
-<a href="http://framework.zend.com" style="font-size:150%">Zend Framework</a>
-and <a href="http://doctrine-project.org" style="font-size:150%">Doctrine
-O/RM.</a></p>
-
-        <?php echo $this->contentPane()->captureEnd($aboutId) ?>
-
-    <?php echo $this->accordionContainer()->captureEnd($accordionContainerId)
-?>
-
 <?php echo $this->contentPane()->captureEnd($dijitId) ?>
 

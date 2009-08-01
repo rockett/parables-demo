@@ -1,1 +1,14 @@
+<?php $manager = Doctrine_Manager::getInstance(); ?>
+
+<p><strong>Manager Attributes</strong></p>
+<pre>
+<?php print_r($manager->getAttributes()); ?>
+</pre>
+
+<?php $conn = $manager->getConnection('demo'); ?>
+
+<p><strong>Connection Attributes</strong></p>
+<pre>
+<?php print_r($conn->getAttributes()); ?>
+</pre>
 
