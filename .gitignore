@@ -1,4 +1,6 @@
-data/pluginLoaderCache.php
+data/developmentPluginLoaderCache.php
+data/productionPluginLoaderCache.php
+data/testPluginLoaderCache.php
 data/logs/*
 data/sessions/*
 tests/logs/report/*
