@@ -27,6 +27,10 @@ class IndexController extends Zend_Controller_Action
      */
     public function indexAction()
     {
-        $worklogs = Doctrine::getTable('Worklog')->findAll();
+        $q = Doctrine_Query::create()
+            ->from('Worklog w')
+            ->leftJoin('w.Entries e');
+
+        $this->view->worklogs = $q->fetchArray();
     }
 }
