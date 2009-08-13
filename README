@@ -1,4 +1,12 @@
-The parables demo is a simple application to demonstrate the capabilities of
-the parables library. See http://github.com/mlurz71/parables for more
-information.
+This demo provides information concerning the setup of a basic, non-modular
+web application, cli and testing environments using the parables library.
+
+The primary files of interest are:
+
+/path/to/parables-demo/application/config/application.ini
+/path/to/parables-demo/scripts/doctrine.sh
+/path/to/parables-demo/tests/index.php
+/path/to/parables-demo/tests/phpunit.xml
+
+See http://github.com/mlurz71/parables for more information.
 
