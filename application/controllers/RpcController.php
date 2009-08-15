@@ -28,6 +28,7 @@ class RpcController extends Zend_Controller_Action
     public function indexAction()
     {
         $this->_helper->layout->disableLayout();
+        $this->_helper->viewRenderer->setNoRender();
 
         $server = new Zend_Json_Server();
         $server->setClass('WorklogService');
