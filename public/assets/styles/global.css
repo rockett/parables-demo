@@ -5,3 +5,7 @@ html, body, #layout, #header-toolbar, #footer-toolbar{
     font-family:arial,verdana,helvetica;
 }
 
+dl, dt, dd, label, input{
+    margin:0;
+    padding:0;
+}

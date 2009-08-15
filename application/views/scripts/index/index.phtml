@@ -1,1 +1,17 @@
+<?php $this->dojo()->requireModule('dojo.rpc.JsonService'); ?>
+
+<?php $this->headScript()->captureStart(); ?>
+dojo.addOnLoad(function(){
+    var worklogService = new dojo.rpc.JsonService('/rpc/index');
+    var deferred = worklogService.getAll().addCallback(function(result) {
+        dojo.forEach(result, function(item) {
+            var p = dojo.doc.createElement('p');
+            p.innerHTML = item.name;
+            dojo.byId("worklogs").appendChild(p);
+        });
+    });
+});
+<?php $this->headScript()->captureEnd(); ?>
+
+<div id="worklogs"></div>
 

@@ -12,9 +12,15 @@
 
 <?php echo $this->headStyle() ?> 
 
-<?php echo $this->dojo() ?> 
+<?php if ($this->dojo()->isEnabled()): ?>
+    <?php echo $this->dojo() ?> 
+<?php endif; ?>
 
-<?php echo $this->jQuery() ?> 
+<?php if ($this->jQuery()->isEnabled()): ?>
+    <?php echo $this->jQuery() ?> 
+<?php endif; ?>
+
+<?php echo $this->headScript() ?> 
 
 </head>
 <body class="nihilo">
