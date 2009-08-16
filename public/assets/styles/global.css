@@ -1,11 +1,29 @@
-html, body, #layout, #header-toolbar, #footer-toolbar{
-    width:100%;
+html, body {
     height:100%;
-    margin:0;
-    font-family:arial,verdana,helvetica;
 }
 
-dl, dt, dd, label, input{
+body {
     margin:0;
-    padding:0;
 }
+
+#header, #footer{
+    border:0;
+}
+
+#header h1 {
+    margin:0;
+}
+
+#footer p{
+    margin:0;
+}
+
+#main td, #main th{
+    font-size:140%;
+    padding:5px;
+}
+
+.dojoxGrid table{
+    margin:0;
+}
+

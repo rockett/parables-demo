@@ -28,4 +28,24 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
     }
+
+    /**
+     * List action
+     *
+     * @return void
+     */
+    public function listAction()
+    {
+        $this->_helper->layout->disableLayout();
+        $this->_helper->viewRenderer->setNoRender();
+
+        $q = Doctrine_Query::create()
+            ->from('Worklog w');
+
+        $data = new Zend_Dojo_Data();
+        $data->setIdentifier('id')
+            ->addItems($q->execute(array(), Doctrine::HYDRATE_ARRAY));
+
+        echo $data->toJson();  
+    }
 }
