@@ -2,20 +2,20 @@
 
     $dijitParams = array('design' => 'headline', 'persist' => true);
 
-    $dijitAttribs = array('style' => 'width: 100%; height: 100%;'); ?>
+    $dijitAttribs = array(); ?>
 
 <?php $this->borderContainer()->captureStart($dijitId, $dijitParams,
     $dijitAttribs) ?>
 
-<?php echo $this->render('_header.phtml') ?>
+<?php // echo $this->render('_header.phtml') ?>
 
-<?php // echo $this->render('_left.phtml') ?>
+<?php echo $this->render('_left.phtml') ?>
 
 <?php echo $this->render('_main.phtml') ?>
 
 <?php // echo $this->render('_right.phtml') ?>
 
-<?php echo $this->render('_footer.phtml') ?>
+<?php // echo $this->render('_footer.phtml') ?>
 
 <?php echo $this->borderContainer()->captureEnd($dijitId) ?>
 

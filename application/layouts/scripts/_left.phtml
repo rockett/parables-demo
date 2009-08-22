@@ -2,10 +2,12 @@
 
     $dijitParams = array('region' => 'left');
 
-    $dijitAttribs = array(); ?>
+    $dijitAttribs = array('style' => 'width:400px;'); ?>
 
 <?php $this->contentPane()->captureStart($dijitId, $dijitParams,
     $dijitAttribs) ?>
+
+<?php echo $this->layout()->content ?>
 
 <?php echo $this->contentPane()->captureEnd($dijitId) ?>
 

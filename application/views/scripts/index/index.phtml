@@ -1,17 +1,13 @@
 <?php Zend_Dojo_View_Helper_Dojo::setUseDeclarative(); ?>
 
-<span dojoType="dojo.data.ItemFileReadStore" jsId="worklogStore" url="/index/list"></span>
+<span dojoType="dojo.data.ItemFileWriteStore" jsId="worklogStore" url="/index/list"></span>
 
 <table id="dojo_worklogs" dojoType="dojox.grid.DataGrid" store="worklogStore" clientSort="true" query="{id: '*'}">
     <thead>
         <tr>
-            <th field="id" width="50px">Id</th>
+            <th width="10%" field="id">Id</th>
 
-            <th field="created_at" width="auto">Created At</th>
-
-            <th field="updated_at" width="auto">Last Updated At</th>
-
-            <th field="name" width="auto">Name</th>
+            <th width="90%" field="name">Name</th>
 
         </tr>
     </thead>

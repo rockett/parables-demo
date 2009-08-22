@@ -7,6 +7,10 @@ INSTALLATION INSTRUCTIONS
 
 3. Update /etc/hosts
 
+4. Unfortunately I don't have a custom build of Dojo yet and so you'll need to
+download and install Dojo to public/assets/scripts. Of course you can update
+application.ini to point Dojo to the location of your choice.
+
 ------------------------------
 DATABASE REBUILD INSTRUCTIONS
 ------------------------------
